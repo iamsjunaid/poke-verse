@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { MdClose } from 'react-icons/md';
-import PropTypes from 'prop-types';
 
 const ShowPokemon = ({ handleClose, selectedPokemonName }) => {
   const [data, setData] = useState(null);
@@ -21,7 +20,6 @@ const ShowPokemon = ({ handleClose, selectedPokemonName }) => {
     fetchData();
   }, [selectedPokemonName]);
 
-  // console.log(data);
 
   if (!data) {
     return <div>Loading...</div>;
@@ -53,12 +51,6 @@ const ShowPokemon = ({ handleClose, selectedPokemonName }) => {
                 </li>
               ))}
             </ul>
-            {/* <h3 className='text-xl font-bold mt-4'>Types:</h3>
-          <ul>
-            {data.types.map(type => (
-              <li key={type.type.name}>{type.type.name}</li>
-            ))}
-          </ul> */}
           </div>
         </div>
       </div>
