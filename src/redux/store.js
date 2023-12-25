@@ -3,7 +3,7 @@ import pokemonSlice from "./pokemon/pokemonSlice";
 
 const store = configureStore({
   reducer: {
-    pokemons: pokemonSlice.reducer,
+    pokemon: pokemonSlice.reducer,
   },
 });
 
