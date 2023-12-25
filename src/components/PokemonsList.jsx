@@ -5,6 +5,7 @@ import pokeball from '../assets/pokeball.png';
 import pokelogo from '../assets/pokelogo.png';
 import ShowPokemon from './ShowPokemon';
 import { Link, useNavigate } from 'react-router-dom';
+import { VscSearch } from "react-icons/vsc";
 
 const PokemonsList = () => {
   const { pokemon, isLoading, error } = useSelector((state) => state.pokemon);
@@ -52,15 +53,15 @@ const PokemonsList = () => {
       <div className='w-32 h-16 mx-auto'>
         <img src={pokelogo} alt='poke verse logo' />
       </div>
-      <div className='flex sm:flex-row justify-between flex-col items-center p-4 text-red-600'>
+      <div className='flex sm:flex-row justify-center flex-col items-center p-4 text-red-600'>
         <input
-          className='text border-b-2 border-red-400 rounded-md p-2 w-full sm:w-1/4 focus:outline-none focus:border-red-600'
+          className='text border-b-2 border-red-400 rounded-md p-2 w-full sm:w-1/2 focus:outline-none focus:border-red-600'
           type='text'
-          placeholder='Search Pokemon...'
+          placeholder='Search Pokemon'
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <p>filter by type</p>
+        <VscSearch className="w-8 h-8"/>
       </div>
       <div className='flex flex-col justify-center items-center w-full mx-auto bg-gray-100 text-white'>
         <ul className='grid grid-cols-1 sm:grid-cols-4 gap-4 w-full sm:w-[100%] p-4 mx-auto'>
