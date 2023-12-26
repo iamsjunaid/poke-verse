@@ -22,7 +22,7 @@ const PokemonsList = () => {
   const handleModal = (name) => {
     setModal(true);
     setSelectedPokemonName(name);
-    navigate(`/details/${name}`);
+    navigate(`/${name}`);
   };
 
   const handleClose = () => {
@@ -92,7 +92,7 @@ const PokemonsList = () => {
         </ul>
       </div>
       {modal && (
-        <Link to={`/details/${selectedPokemonName}`}>
+        <Link to={`/${selectedPokemonName}`}>
           <ShowPokemon
             handleClose={handleClose}
             selectedPokemonName={selectedPokemonName}
